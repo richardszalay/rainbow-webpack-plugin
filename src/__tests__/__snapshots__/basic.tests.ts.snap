@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`default options creates item if it doesn't exist: new 1`] = `
+"---
+ID: aaa
+Template: 962b53c4-f93b-4df9-9821-415c867b8903
+DB: master
+SharedFields:
+  - ID: 40e50ed9-ba07-4702-992e-a912738d32dc
+    Hint: Blob
+    BlobID: bbb
+    Value: ZnVuY3Rpb24gZm9vKGJhcikgeyByZXR1cm4gYmFyOyB9
+  - ID: 6954b7c7-2487-423f-8600-436cb3b6dc0e
+    Hint: Size
+    Value: 33
+  - ID: 6f47a0a5-9c94-4b48-abeb-42d38def6054
+    Hint: Mime Type
+    Value: application/x-javascript
+  - ID: ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e
+    Hint: __Sortorder
+    Value: 10
+  - ID: c06867fe-9a43-4c7d-b739-48780492d06f
+    Hint: Extension
+    Value: .js
+Languages:
+  - Language: en
+    Versions:
+      - Version: 1
+        Fields:
+          - ID: 25bed78c-4957-4165-998a-ca1b52f67497
+            Hint: __Created
+            Value: 20180102T030405Z
+          - ID: 5dd74568-4d4b-44c1-b513-0af5f4cda34f
+            Hint: __Created by
+            Value: sitecore\\\\admin
+Path: /content/Parent1/test
+Parent: parent1-id
+"
+`;
+
+exports[`default options updates item if it already exists: exists 1`] = `
+"---
+ID: child-id
+Path: /content/Parent1/child1
+Parent: parent1-id
+SharedFields:
+  - ID: 40e50ed9-ba07-4702-992e-a912738d32dc
+    Hint: Blob
+    BlobID: aaa
+    Value: ZnVuY3Rpb24gZm9vKGJhcikgeyByZXR1cm4gYmFyOyB9
+  - ID: 6954b7c7-2487-423f-8600-436cb3b6dc0e
+    Hint: Size
+    Value: 33
+  - ID: 6f47a0a5-9c94-4b48-abeb-42d38def6054
+    Hint: Mime Type
+    Value: application/x-javascript
+  - ID: ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e
+    Hint: __Sortorder
+    Value: 10
+  - ID: c06867fe-9a43-4c7d-b739-48780492d06f
+    Hint: Extension
+    Value: .js
+"
+`;

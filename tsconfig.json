@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "target": "es5",
+        "lib": [
+            "es6",
+            "dom"
+        ],
+        "moduleResolution": "node",
+        "declaration": true,
+        "outFile": "./dist/index.js",
+        "module": "system",
+        "sourceMap": true
+    },
+    "exclude": [
+        "dist",
+        "node_modules"
+    ]
+}
