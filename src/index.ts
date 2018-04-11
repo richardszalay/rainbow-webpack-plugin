@@ -51,7 +51,11 @@ export class RainbowPlugin {
     }
 
     apply(compiler: Compiler) {
-        compiler.hooks.emit.tapAsync("UnicornPlugin", this.emit);
+        if (compiler.hooks) {
+            compiler.hooks.emit.tapAsync("UnicornPlugin", (c, cb) => this.emit(c, cb));
+        } else {
+            compiler.plugin("emit", (c, cb) => this.emit(c, cb));
+        }
     }
 
     emit(comp: compilation.Compilation, callback: () => void) {
