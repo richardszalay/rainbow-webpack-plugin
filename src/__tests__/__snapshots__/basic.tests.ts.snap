@@ -21,7 +21,7 @@ SharedFields:
     Value: 10
   - ID: c06867fe-9a43-4c7d-b739-48780492d06f
     Hint: Extension
-    Value: .js
+    Value: js
 Languages:
   - Language: en
     Versions:
@@ -59,6 +59,6 @@ SharedFields:
     Value: 10
   - ID: c06867fe-9a43-4c7d-b739-48780492d06f
     Hint: Extension
-    Value: .js
+    Value: js
 "
 `;

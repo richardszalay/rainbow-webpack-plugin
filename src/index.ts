@@ -176,7 +176,7 @@ function getFileTypeInfo(filename: string, options: RainbowPluginOptions): FileT
     const info = {
         filename: targetFile,
         name,
-        extension,
+        extension: extension.replace(/\.(.+)/, "$1"),
         templateId: TEMPLATE_IDS.FILE,
         mimeType: KnownMimeTypes[extension] || "application/octet-stream"
     };
