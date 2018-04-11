@@ -42,7 +42,7 @@ export interface RainbowPluginOptions {
     populateSitecoreItem?(item: SitecoreItem): void;
 }
 
-export default class RainbowPlugin {
+export class RainbowPlugin {
 
     private options: RainbowPluginOptions;
 

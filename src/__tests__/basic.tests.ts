@@ -1,7 +1,7 @@
 import { PluginEnvironment, createCompiler, createMockEnvironment } from "./helpers";
 
 import * as webpack from "webpack";
-import RainbowPlugin from "..";
+import { RainbowPlugin } from "..";
 import * as tapable from "tapable";
 
 import { getUuid, enqueueUuid, getDate, setDate } from "./mocks";

@@ -8,12 +8,13 @@
         ],
         "moduleResolution": "node",
         "declaration": true,
-        "outFile": "./dist/index.js",
-        "module": "system",
-        "sourceMap": true
+        "outDir": "./dist",
+        "module": "commonjs",
+        "sourceMap": false
     },
     "exclude": [
         "dist",
-        "node_modules"
+        "node_modules",
+        "__tests__"
     ]
 }

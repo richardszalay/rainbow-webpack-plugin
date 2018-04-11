@@ -3,7 +3,7 @@ import { createMockEnvironment } from "./helpers";
 import { parseItem } from "../node-rainbow";
 
 import * as webpack from "webpack";
-import RainbowPlugin, { RainbowPluginOptions } from "..";
+import { RainbowPlugin, RainbowPluginOptions } from "..";
 import * as tapable from "tapable";
 
 import { getUuid, enqueueUuid, getDate, setDate } from "./mocks";
