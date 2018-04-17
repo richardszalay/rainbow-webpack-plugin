@@ -42,6 +42,7 @@ exports[`default options updates item if it already exists: exists 1`] = `
 "---
 ID: child-id
 Path: /content/Parent1/child1
+Template: 962b53c4-f93b-4df9-9821-415c867b8903
 Parent: parent1-id
 SharedFields:
   - ID: 40e50ed9-ba07-4702-992e-a912738d32dc
