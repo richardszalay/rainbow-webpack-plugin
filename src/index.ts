@@ -100,6 +100,8 @@ function updateSitecoreItem(item: SitecoreItem, asset: WebpackAsset,
 
     let input = asset.source();
 
+    item.Template = fileInfo.templateId;
+
     if (!Buffer.isBuffer(input)) {
         if (typeof input === "string") {
             input = new Buffer(input); // Older node versions

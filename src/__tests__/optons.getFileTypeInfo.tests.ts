@@ -61,6 +61,27 @@ describe("getFileTypeInfo options", () => {
             });
     });
 
+    it("can change the template id for existing items", async () => {
+
+        compilation.assets["child1.js"]  = compilation.assets["test.js"];
+        delete compilation.assets["test.js"];
+
+        const options: RainbowPluginOptions = {
+            getFileTypeInfo(filename, info) {
+                info.templateId = "aaabbbccc";
+                return info;
+            }
+        };
+
+        const promise = new Promise((res, rej) => new RainbowPlugin(options).emit(compilation, res))
+            .then(() => parseItem(compilation.assets["child1.yml"].source().toString()));
+
+        await expect(promise)
+            .resolves.toMatchObject({
+                Template: "aaabbbccc"
+            });
+    });
+
     it("can change the mimetype", async () => {
         const options: RainbowPluginOptions = {
             getFileTypeInfo(filename, info) {
