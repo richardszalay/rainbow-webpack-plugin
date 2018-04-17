@@ -1,4 +1,11 @@
 ---
 ID: child-id
-Path: /content/Parent1/child1
+Parent: 22222
 Template: 11111
+Path: /content/Parent1/child1
+DB: master
+SharedFields:
+  - ID: 40e50ed9-ba07-4702-992e-a912738d32dc
+    Hint: Blob
+    BlobID: ORIGINAL_BLOB_ID
+    Value: ZnVuY3Rpb24gZm9vKGJhcikgeyByZXR1cm4gYmFyOyB9

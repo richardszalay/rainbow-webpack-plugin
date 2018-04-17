@@ -1,5 +1,5 @@
 
-const uuidQueue: string[] = [];
+let uuidQueue: string[] = [];
 
 export function getUuid() {
     if (uuidQueue.length === 0) {
@@ -7,6 +7,10 @@ export function getUuid() {
     }
 
     return uuidQueue.shift();
+}
+
+export function clearUuids() {
+    uuidQueue = [];
 }
 
 export function enqueueUuid(...ids: string[]) {

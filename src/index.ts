@@ -14,7 +14,8 @@ import {
     OrphanSitecoreItem,
     loadItem,
     formatItem,
-    newID
+    newID,
+    findField
 } from "./node-rainbow";
 
 const FIELD_IDS = {
@@ -122,12 +123,17 @@ function updateSitecoreItem(item: SitecoreItem, asset: WebpackAsset,
         });
     }
 
-    updateField(item.SharedFields, {
-        ID: FIELD_IDS.BLOB,
-        Hint: "Blob",
-        BlobID: newID(),
-        Value: input.toString("base64")
-    });
+    const newBlobValue = input.toString("base64");
+    const blobField = findField(item.SharedFields, FIELD_IDS.BLOB);
+
+    if (!blobField || blobField.Value !== newBlobValue) {
+        updateField(item.SharedFields, {
+            ID: FIELD_IDS.BLOB,
+            Hint: "Blob",
+            BlobID: newID(),
+            Value: input.toString("base64")
+        });
+    }
 
     updateField(item.SharedFields, {
         ID: FIELD_IDS.SIZE,

@@ -36,7 +36,7 @@ export function reparentItem(item: OrphanSitecoreItem, itemPath: string, itemNam
 
     const parentPath = getParentPath(itemPath);
     if (!fs.existsSync(parentPath)) {
-        throw new Error(`Could not find parent Unicorn YML for ${itemPath}`);
+        throw new Error(`Could not find parent Unicorn YML for ${itemPath} at ${parentPath}`);
     }
 
     const parentItem = loadItem(parentPath);
@@ -49,6 +49,11 @@ export function reparentItem(item: OrphanSitecoreItem, itemPath: string, itemNam
 
 export function getParentPath(itemPath: string) {
     return path.dirname(itemPath) + ".yml";
+}
+
+export function findField(fields: ItemField[], idOrHint: string) {
+    return fields.filter((f) => f.ID === idOrHint)[0] ||
+        fields.filter((f) => f.Hint === idOrHint)[0];
 }
 
 export function updateField(fields: ItemField[], field: ItemField) {

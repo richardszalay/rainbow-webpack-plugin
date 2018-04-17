@@ -38,16 +38,44 @@ Languages:
 "
 `;
 
-exports[`default options updates item if it already exists: exists 1`] = `
+exports[`default options does not generate a new blobID if the blob value hasn't changed: exists 1`] = `
 "---
 ID: child-id
-Path: /content/Parent1/child1
-Template: 962b53c4-f93b-4df9-9821-415c867b8903
 Parent: parent1-id
+Template: 962b53c4-f93b-4df9-9821-415c867b8903
+Path: /content/Parent1/child1
+DB: master
 SharedFields:
   - ID: 40e50ed9-ba07-4702-992e-a912738d32dc
     Hint: Blob
-    BlobID: aaa
+    BlobID: ORIGINAL_BLOB_ID
+    Value: ZnVuY3Rpb24gZm9vKGJhcikgeyByZXR1cm4gYmFyOyB9
+  - ID: 6954b7c7-2487-423f-8600-436cb3b6dc0e
+    Hint: Size
+    Value: 33
+  - ID: 6f47a0a5-9c94-4b48-abeb-42d38def6054
+    Hint: Mime Type
+    Value: application/x-javascript
+  - ID: ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e
+    Hint: __Sortorder
+    Value: 10
+  - ID: c06867fe-9a43-4c7d-b739-48780492d06f
+    Hint: Extension
+    Value: js
+"
+`;
+
+exports[`default options updates item if it already exists: exists 1`] = `
+"---
+ID: child-id
+Parent: parent1-id
+Template: 962b53c4-f93b-4df9-9821-415c867b8903
+Path: /content/Parent1/child1
+DB: master
+SharedFields:
+  - ID: 40e50ed9-ba07-4702-992e-a912738d32dc
+    Hint: Blob
+    BlobID: ORIGINAL_BLOB_ID
     Value: ZnVuY3Rpb24gZm9vKGJhcikgeyByZXR1cm4gYmFyOyB9
   - ID: 6954b7c7-2487-423f-8600-436cb3b6dc0e
     Hint: Size
