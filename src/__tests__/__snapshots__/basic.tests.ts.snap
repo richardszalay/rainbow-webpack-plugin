@@ -3,9 +3,9 @@
 exports[`default options creates item if it doesn't exist: new 1`] = `
 "---
 ID: aaa
-Path: /content/Parent1/test
-Template: 962b53c4-f93b-4df9-9821-415c867b8903
 Parent: parent1-id
+Template: 962b53c4-f93b-4df9-9821-415c867b8903
+Path: /content/Parent1/test
 DB: master
 SharedFields:
   - ID: 40e50ed9-ba07-4702-992e-a912738d32dc

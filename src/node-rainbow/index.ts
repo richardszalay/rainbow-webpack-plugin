@@ -93,9 +93,9 @@ export function newItem(
 
     return {
         ID: newID(),
-        Path: "",
-        Template: templateId,
         Parent: "",
+        Template: templateId,
+        Path: "",
         DB: db,
         SharedFields: [],
         Languages: [
