@@ -1,6 +1,6 @@
 {
   "name": "rainbow-webpack-plugin",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Webpack plugin for Sitecore development that emits files in Unicorn's Rainbow format, ready for transparent sync",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
